@@ -133,7 +133,7 @@ def check():
 		res=res.text
 		ccs = res.split('"follow_coin":')[1].split(",")[0]
 		return {"coin": ccs}
-app.route("/api/v1/marcos/get")
+@app.route("/api/v1/marcos/get")
 def get1():	
 	user=request.args.get("target")
 	youruser=request.args.get("username")
