@@ -134,12 +134,12 @@ def check():
 		ccs = res.split('"follow_coin":')[1].split(",")[0]
 		return {"coin": ccs}
 app.route("/api/v1/marcos/get")
-def get():	
+def get1():	
 	user=request.args.get("target")
 	youruser=request.args.get("username")
 	r = requests.get(f"https://api.dlyar-dev.tk/info-insta?user={user}").json()
 	X = r["id"]
-	r = requests.get(f"https://api.dlyar-dev.tk/info-insta?user={user}").json()
+	r = requests.get(f"https://api.dlyar-dev.tk/info-insta?user={youruser}").json()
 	myide = r["id"]
 	message2 = user
 	message_bytes2 = message2.encode('ascii')
